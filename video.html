@@ -5,21 +5,20 @@
 </head>
 <body>
 <input name="v" id="v" type="text" placeholder="Video URL">
-<input type="submit" name="submit" id="submit" value="Play">
+<button name="submit" type="button" id="submit" onclick="submit()">Play</button>
 <div id="video"></div>
 <script type="text/javascript">
-  $('#v').focus;
-	$("#submit").bind("click",function(){
-		var vurl = $('#v').val();
-		if ($('#v').val() == ""){
-			layer.alert('Please enter video URL!');
-			$('#v').focus();
-			return (false)
+	function submit() {
+		alert("test");
+		var vurl = document.getElementById("v").value;
+		if (vurl == ""){
+			alert("Please enter video URL!");
+			return (false);
 			}else{
 				var xurl='http://yun.mt2t.com/yun?url=';
 				document.getElementById('video').innerHTML = "<iframe width='100%' height='500' allowTransparency='true' frameborder='0' scrolling='no' src='" + xurl+vurl + "'></iframe>"
 			}
-	});
+	};
 </script>
 </body>
 </html>
