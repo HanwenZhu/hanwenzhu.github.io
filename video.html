@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<head>
+<title>Video Player - ICREIUHECIIJC</title>
+</head>
+<body>
+<input name="v" id="v" type="text" placeholder="Video URL">
+<input type="submit" name="submit" id="submit" value="Play">
+<div id="Video"></div>
+<script type="text/javascript">
+  $('#v').focus;
+	$("#submit").bind("click",function(){
+		var vurl = $('#v').val();
+		if ($('#v').val() == ""){
+			layer.alert('Please enter video URL!');
+			$('#v').focus();
+			return (false)
+			}else{
+				var xurl='http://yun.mt2t.com/yun?url=';
+				document.getElementById('a1').innerHTML = "<iframe width='100%' height='500' allowTransparency='true' frameborder='0' scrolling='no' src='" + xurl+vurl + "'></iframe>"
+			}
+	});
+</script>
