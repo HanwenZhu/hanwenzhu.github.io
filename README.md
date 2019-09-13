@@ -1,6 +1,6 @@
-## Welcome to HanwenZhu's website!
+## This is my site.
 
-You can directly go to [this website](http://hanwenzhu.github.io/).
+You can directly go there.
 
 Contributers:
-- HanwenZhu
+- Me
