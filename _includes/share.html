@@ -1,0 +1,15 @@
+<section>
+
+  {%- if site.share_links.twitter -%}
+    <a href="https://twitter.com/intent/tweet?text={{ page.title | url_encode }}&url={{ page.url | absolute_url | url_encode }}" class="btn">
+      <i class="fab fa-fw fa-twitter fa-2x" style="color: #55acee;"></i>
+    </a>
+  {%- endif -%}
+
+  {%- if site.share_links.facebook -%}
+    <a href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | absolute_url | url_encode }}" class="btn">
+      <i class="fab fa-fw fa-facebook fa-2x" style="color: #3b5998;"></i>
+    </a>
+  {%- endif -%}
+
+</section>

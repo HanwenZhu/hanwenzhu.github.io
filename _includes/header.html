@@ -1,0 +1,32 @@
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
+  <a class="navbar-brand" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+  <button class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapsed">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbar-collapsed">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item{% if page.name == "index.md" %} active{% endif %}">
+        <a class="nav-link" href="{{ "/" | relative_url }}">Home</a>
+      </li>
+      <li class="nav-item{% if page.name == "about.md" %} active{% endif %}">
+        <a class="nav-link" href="{{ "/about" | relative_url }}">About</a>
+      </li>
+      {%- if site.posts.size > 0 -%}
+        <li class="nav-item{% if page.collection == "posts" %} active{% endif %} dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbar-posts" data-toggle="dropdown">
+            Posts
+          </a>
+          <div class="dropdown-menu">
+            {% assign post = site.posts | first %}
+            <a class="dropdown-item" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+            {%- for post in site.posts offset:1 -%}
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+            {%- endfor -%}
+          </div>
+        </li>
+      {%- endif -%}
+    </ul>
+  </div>
+</nav>

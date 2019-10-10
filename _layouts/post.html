@@ -1,0 +1,33 @@
+---
+layout: default
+---
+
+<article>
+
+  <header>
+    {%- if page.subtitle -%}
+      <h1 class="mb-0">{{ page.title | escape }}</h1>
+      <h5>{{ page.subtitle | escape }}</h5>
+    {%- else -%}
+      <h1>{{ page.title | escape }}</h1>
+    {%- endif -%}
+  </header>
+
+  {{ content }}
+
+  <h6 class="text-right mr-5">
+    <time datetime="{{ page.date | date_to_xmlschema }}">
+      {%- assign date_format = site.date_format | default: "%B %-d, %Y" -%}
+      {{ page.date | date: date_format }}
+    </time>
+  </h6>
+
+  {%- if page.share -%}
+    {%- include share.html -%}
+  {%- endif -%}
+
+  {%- if site.disqus and page.comments and jekyll.environment == "production" -%}
+    {%- include disqus.html -%}
+  {%- endif -%}
+
+</article>
