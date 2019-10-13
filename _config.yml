@@ -24,9 +24,14 @@ disqus: thomaszhu
 date_format: "%B %-d, %Y"
 
 timezone: China/Shanghai
-markdown: kramdown
-highlighter: rouge
+
 permalink: /:year-:month-:day-:title/
+
+highlighter: rouge
+markdown: kramdown
+kramdown:
+  syntax_highlighter: rouge
+  math_engine:
 
 plugins:
   - jekyll-katex
