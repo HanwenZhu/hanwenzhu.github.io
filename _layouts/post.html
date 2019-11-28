@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<article>
+<article class="mx-auto" style="max-width: 768px">
 
   <header>
     {%- if page.subtitle -%}
@@ -15,7 +15,7 @@ layout: default
 
   {{ content }}
 
-  <h6 class="text-right mr-5">
+  <h6 class="text-right font-italic">
     <time datetime="{{ page.date | date_to_xmlschema }}">
       {%- assign date_format = site.date_format | default: "%B %-d, %Y" -%}
       {{ page.date | date: date_format }}
