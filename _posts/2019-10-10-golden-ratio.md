@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Golden Ratio
-subtitle: An Investigation of Mathematical Relationships
+description: An Investigation of Mathematical Relationships
 category: math
 excerpt_separator: "\0"
 ---

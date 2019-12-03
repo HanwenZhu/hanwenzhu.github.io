@@ -1,7 +1,7 @@
 ---
 layout: page
 title: About
-subtitle: About this personal blog
+description: About this personal blog
 permalink: /about/
 ---
 

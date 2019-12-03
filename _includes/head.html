@@ -3,19 +3,25 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <title>
+  {%- capture title -%}
     {%- if page.title -%}
       {{ page.title | escape }} | {{ site.title | escape }}
     {%- else -%}
-      {{ site.title | escape }}
+      {{ site.title | escape }} | {{ site.tagline | escape }}
     {%- endif -%}
-  </title>
+  {%- endcapture -%}
+  <title>{{ title }}</title>
 
-  <meta name="author" content="{{ site.author | escape }}" />
-
-  {%- if page.subtitle -%}
-    <meta name="description" content="{{ page.subtitle | escape }}">
+  <meta property="og:title" content="{{ title }}">
+  <meta name="author" content="{{ page.author | default: site.author | escape }}">
+  <meta property="og:locale" content="{{ page.locale | default: site.locale | default: "en_US" }}">
+  {%- if page.description -%}
+    <meta name="description" content="{{ page.description | default: page.excerpt | strip_html | escape | truncatewords: 20 }}">
+    <meta property="og:description" content="{{ page.description | default: page.excerpt | strip_html | escape | truncatewords: 20 }}">
   {%- endif -%}
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:site_name" content="{{ site.title | escape }}">
 
   <link rel="stylesheet" href="{{ "/assets/vendors/bootstrap/bootstrap.min.css" | relative_url }}">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.1/css/all.css">

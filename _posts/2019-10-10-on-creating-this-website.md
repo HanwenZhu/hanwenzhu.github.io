@@ -1,7 +1,7 @@
 ---
 layout: post
 title: On Creating This Website
-subtitle: And Other Thoughts
+description: And Other Thoughts
 ---
 
 I am a very bored grade 11 student who is loaded by pressure from high school curricula and college application. This blog is created primarily for my own pleasure and, despite having Google Analytics tracking the number of visitors, I don't care as much if people read the posts.

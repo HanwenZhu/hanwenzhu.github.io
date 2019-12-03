@@ -5,9 +5,9 @@ layout: default
 <article class="mx-auto" style="max-width: 768px">
 
   <header>
-    {%- if page.subtitle -%}
+    {%- if page.description -%}
       <h1 class="mb-0">{{ page.title | escape }}</h1>
-      <h5>{{ page.subtitle | escape }}</h5>
+      <h5>{{ page.description | escape }}</h5>
     {%- else -%}
       <h1>{{ page.title | escape }}</h1>
     {%- endif -%}

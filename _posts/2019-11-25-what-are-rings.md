@@ -1,7 +1,7 @@
 ---
 layout: post
 title: What Are Rings?
-subtitle: A Generalization of What We Call Numbers
+description: A Generalization of What We Call Numbers
 category: math
 excerpt_separator: "\0"
 ---
