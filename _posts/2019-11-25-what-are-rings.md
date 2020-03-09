@@ -82,7 +82,7 @@ $$
       a\cdot 0 &= a
     ,\end{aligned}
 $$
-but by the theorem we have proven above, $a\cdot 0=a$, which means $a=0$! This is very important, since we are considering *any* $a$. So the whole ring is essentially one thing---nothing! In this case, *if* it happens that $0=1$, we call the ring a *zero ring*.
+but by the theorem we have proven above, $a\cdot 0=0$, which means $a=0$! This is very important, since we are considering *any* $a$. So the whole ring is essentially one thing---nothing! In this case, *if* it happens that $0=1$, we call the ring a *zero ring*.
 
 ---
 
