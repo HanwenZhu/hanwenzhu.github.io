@@ -67,3 +67,4 @@ exclude:
   - node_modules/
   - LICENSE
   - README.md
+  - build.sh
