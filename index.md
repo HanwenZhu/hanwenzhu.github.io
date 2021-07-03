@@ -1,4 +1,4 @@
 ---
 layout: home
-description: A blog about math and computer science
+description: A blog about me
 ---
